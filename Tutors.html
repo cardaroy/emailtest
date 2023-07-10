@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tutors</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="img/logoWebsite2.png"
+            alt="Sydney Tutoring Prodigy Tuition"
+            width="157.25"
+            height="47.19"
+          />
+        </a>
+      </div>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="aboutus.html">About Us</a>
+          </li>
+          <li>
+            <a href="pricing.html">Courses & Pricings</a>
+          </li>
+          <li>
+            <a href="reviews.html">Reviews</a>
+          </li>
+          <li>
+            <a href="" class="active">Register</a>
+          </li>
+          <li>
+            <a href="">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <script>
+      hamburger = document.querySelector(".hamburger");
+      hamburger.onclick = function () {
+        navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+      };
+    </script>
+
+
+
+
+
+    <div class="bookingInformation">
+
+      <h1>Join our team today!</h1>
+
+    </div>
+    
+    </div>
+
+    <div class = "regContainer">
+
+
+    <form id="regForm" action="">
+      <div class = "registerHeader">
+      
+    </div>
+
+
+
+   
+      <!-- One "tab" for each step in the form: -->
+      <div class="tab">
+        <h1>Let's start off with your name:</h1>
+        <p>
+          <input placeholder="First name..." oninput="this.className = ''" />
+        </p>
+        <p>
+          <input placeholder="Last name..." oninput="this.className = ''" />
+        </p>
+      </div>
+
+      <div class="tab">
+        <h1>Are you the student, or the parent/guardian?</h1>
+
+        <div class ="custom_select_parentStudent" oninput="this.className = ''">
+          <select>
+            <option value = "">Select</option>
+            <option value = "parent">Parent</otion>
+            <option value = "student">Student</option>
+            </select>
+        </div>
+
+      </div>
+
+      <div class="tab">
+        <h1> Contact Info: </h1>
+        <p><input placeholder="E-mail..." oninput="this.className = ''" /></p>
+        <p><input placeholder="Phone..." oninput="this.className = ''" /></p>
+      </div>
+
+      <div class="tab">
+        <!----
+        <h1>Birthday:</h1>
+        <p><input placeholder="dd" oninput="this.className = ''" /></p>
+        <p><input placeholder="mm" oninput="this.className = ''" /></p>
+        <p><input placeholder="yyyy" oninput="this.className = ''" /></p>
+      </div>
+    -->
+    <h1>What year group are you in?</h1>
+    <div class ="dropdown">
+      <select>
+        <option value = "">Select a year</option>
+        <option value = "Kindergarden">Kindergarden</otion>
+        <option value = "Year 1">Year 1</option>
+        <option value="Year 2">Year 2</option>
+<option value="Year 3">Year 3</option>
+<option value="Year 4">Year 4</option>
+<option value="Year 5">Year 5</option>
+<option value="Year 6">Year 6</option>
+<option value="Year 7">Year 7</option>
+<option value="Year 8">Year 8</option>
+<option value="Year 9">Year 9</option>
+<option value="Year 10">Year 10</option>
+<option value="Year 11">Year 11</option>
+<option value="Year 12">Year 12</option>
+        </select>
+      </div>
+     
+    
+      </div>
+      <div class="tab">
+        <h1>What do you want tutoring for?</h1>
+        <p><input placeholder="English, math, OC Tutoring...." oninput="this.className = ''" /></p>
+      </div>
+      <div class="tab">
+        <h1>Is there anything else we should know about you? </h1>
+        <p>Special needs, tutor preferences, favourite hobbies?</p>
+          <div class = "inputContainer">
+          <textarea placeholder="Hello, My name is John, I have a child in year 11 who needs help
+          with Math extension 1, chemistry and English standard." oninput="this.className = ''">  </textarea>
+          </div>
+      </div>
+
+      
+      <div class = "buttonContainer" style="overflow: auto">
+        <div style="display: flex; justify-content: center;">
+          <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+            Previous
+          </button>
+          <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        </div>
+      </div>
+
+      <!-- Circles which indicates the steps of the form: -->
+      <div style="text-align: center; margin-top: 40px">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+    </form>
+  </div>
+
+    <script>
+      var currentTab = 0; // Current tab is set to be the first tab (0)
+      showTab(currentTab); // Display the current tab
+
+      function showTab(n) {
+        // This function will display the specified tab of the form ...
+        var x = document.getElementsByClassName("tab");
+        x[n].style.display = "block";
+        // ... and fix the Previous/Next buttons:
+        if (n == 0) {
+          document.getElementById("prevBtn").style.display = "none";
+        } else {
+          document.getElementById("prevBtn").style.display = "inline";
+        }
+        if (n == x.length - 1) {
+          document.getElementById("nextBtn").innerHTML = "Submit";
+        } else {
+          document.getElementById("nextBtn").innerHTML = "Next";
+        }
+        // ... and run a function that displays the correct step indicator:
+        fixStepIndicator(n);
+      }
+
+      function nextPrev(n) {
+        // This function will figure out which tab to display
+        var x = document.getElementsByClassName("tab");
+        // Exit the function if any field in the current tab is invalid:
+        if (n == 1 && !validateForm()) return false;
+        // Hide the current tab:
+        x[currentTab].style.display = "none";
+        // Increase or decrease the current tab by 1:
+        currentTab = currentTab + n;
+        // if you have reached the end of the form... :
+        if (currentTab >= x.length) {
+          //...the form gets submitted:
+          document.getElementById("regForm").submit();
+          return false;
+        }
+        // Otherwise, display the correct tab:
+        showTab(currentTab);
+      }
+
+      function validateForm() {
+        // This function deals with validation of the form fields
+        var x,
+          y,
+          i,
+          valid = true;
+        x = document.getElementsByClassName("tab");
+        y = x[currentTab].getElementsByTagName("input");
+        y = x[currentTab].getElementsByTagName("select");
+        // A loop that checks every input field in the current tab:
+        for (i = 0; i < y.length; i++) {
+          // If a field is empty...
+          if (y[i].value == "" || (y[i].type === 'email' && !validateEmail(y[i].value))) {
+            // add an "invalid" class to the field:
+
+            y[i].className += " invalid";
+            // and set the current valid status to false:
+            valid = false;
+          }
+         
+        }
+        // If the valid status is true, mark the step as finished and valid:
+        if (valid) {
+          document.getElementsByClassName("step")[currentTab].className +=
+            " finish";
+        }
+        return valid; // return the valid status
+      }
+
+      function fixStepIndicator(n) {
+        // This function removes the "active" class of all steps...
+        var i,
+          x = document.getElementsByClassName("step");
+        for (i = 0; i < x.length; i++) {
+          x[i].className = x[i].className.replace(" active", "");
+        }
+        //... and adds the "active" class to the current step:
+        x[n].className += " active";
+      }
+      function validateEmail(email) {
+    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+    </script>
+    
+    
+
+    </form>
+  </body>
+</html>

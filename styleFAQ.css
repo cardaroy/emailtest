@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+  }
+
+  .hyperlink {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    z-index: 9999;
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
+  .nav-bar ul {
+    display: flex;
+  }
+  
+  .nav-bar ul li a {
+    display: block;
+    color: black;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  
+  .nav-bar ul li a:hover {
+    color: white;
+    background: rgb(31, 156, 215);
+  }
+  
+  @media only screen and (max-wdth: 1320px) {
+    header {
+      padding: 0 50px;
+    }
+  }
+  @media only screen and (max-wdth: 1100px) {
+    header {
+      padding: 0 30px;
+    }
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+    .hamburger .line {
+      width: 30px;
+      height: 3px;
+      background: black;
+      margin: 6px 0;
+    }
+    .nav-bar {
+      height: 0px;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: rgb(255, 255, 255);
+      transition: 0.5s;
+      overflow: hidden;
+      z-index: 100;
+    }
+  
+    .nav-bar.active {
+      height: 450px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+  
+    .nav-bar ul {
+      display: block;
+      width: fit-content;
+      margin: 80px auto 0 auto;
+      text-align: center;
+      transition: 0.5s;
+      opacity: 0;
+    }
+  
+    .nav-bar.active ul {
+      opacity: 1;
+    }
+    .nav-bar ul li a {
+      margin-bottom: 12px;
+      color: black;
+    }
+  }
+
+  body {
+    background: #07141d;
+  }
+  #accordion{
+    margin: 100px auto;
+    width: 600px;
+    
+
+  }
+  #accordion li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px;
+  }
+
+  #accordion li label {
+
+    padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #c20000;
+  }
+
+  #accordion li label span {
+    transform: rotate(90deg);
+    font-size: 22px;
+    color: #333;
+  }
+
+  #accordion label + input[type = "radio"]{
+    display: none;
+  }
+
+  #accordion .content {
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+
+  }
+
+  #accordion label + input[type = "radio"]:checked + .content{
+    max-height: 400px;
+  }

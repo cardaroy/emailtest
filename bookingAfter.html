@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <script src="https://kit.fontawesome.com/1ed3d682a0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo_black">
+          <a href="index.html">
+            <img
+              src="img/logoWebsite2.png"
+              alt="Sydney Tutoring Prodigy Tuition"
+              width="157.25"
+              height="47.19"
+            />
+          </a>
+        </div>
+        
+        
+      </header>
+      <div class = "thankYouForBooking_container">
+        <style>
+          .icon-heading-container {
+            text-align: center;
+          }
+        
+          .fa-circle-check {
+            display: block;
+            margin: 0 auto;
+            color: #009dff;
+            margin-bottom: 50px;
+          }
+        </style>
+        
+        <div class="icon-heading-container">
+          <i class="fa-regular fa-circle-check fa-10x" ></i>
+          <h1> <span id="firstNamePlaceholder"> </span>, thank you for booking with us!</h1>
+          <p> We should get back to you via text and email within 72 hours. </p>
+          
+          <div class = "optionRow"> 
+            
+            <button class = "afterOption"> <a href = index.html> Home</a> </button>
+            <button class = "afterOption"> <a href = booking.html#k>Book another student</a></button>
+            
+          </div>
+
+        </div>
+      </div>
+      
+</body>
+
+<script>
+  // Retrieve the first name from the query parameter
+  var urlParams = new URLSearchParams(window.location.search);
+  var firstName = urlParams.get('firstName');
+  
+  // Update the placeholder or HTML element with the first name
+  var firstNameElement = document.getElementById('firstNamePlaceholder');
+  firstNameElement.textContent = firstName;
+</script>
+</html>

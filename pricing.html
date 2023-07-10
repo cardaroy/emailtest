@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="au">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <script src="https://kit.fontawesome.com/1ed3d682a0.js" crossorigin="anonymous"></script>
+
+
+    <title>Courses and Pricings</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="img/logoWebsite2.png"
+            alt="Sydney Tutoring Prodigy Tuition"
+            width="157.25"
+            height="47.19"
+          />
+        </a>
+      </div>
+      <div class="hamburger">
+        <div class="line_black"></div>
+        <div class="line_black"></div>
+        <div class="line_black"></div>
+      </div>
+      <nav class="nav-bar_black">
+        <ul>
+          <li>
+            <a href="index.html#products">Our Tutors</a>
+          </li>
+          <li>
+            <a href=""class="active">Courses & Pricings</a>
+          </li>
+          <li>
+            <a href="booking.html">Book a Lesson</a>
+          </li>
+          <li>
+            <a href="tutorBooking.html">Become a Tutor</a>
+          </li>
+
+        </ul>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        
+      </nav>
+    </header>
+
+    <script>
+      hamburger = document.querySelector(".hamburger");
+      hamburger.onclick = function () {
+        navBar = document.querySelector(".nav-bar_black");
+        navBar.classList.toggle("active");
+      };
+    </script>
+
+<script>
+  const subjectButtons = document.querySelectorAll(".button");
+  const subjectsContainers = document.querySelectorAll(".subjects-container");
+  const yearTitles = document.querySelector(".year-12");
+
+  subjectButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetSectionId = button.dataset.targetSection;
+      const targetSection = document.getElementById(targetSectionId);
+      
+      subjectsContainers.forEach((container) => {
+        container.style.display = "none";
+      });
+      
+      targetSection.style.display = "block";
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  const hscButton = document.querySelector("#hsc-button");
+
+  hscButton.addEventListener("click", () => {
+    yearTitles.scrollIntoView({ behavior: "smooth" });
+  });
+
+  function expandContent(button) {
+    // Expand content code
+  }
+</script>
+    
+
+    <div class="container">
+      <div class="subjects-header">
+        <center><h1>Subjects</h1></center>
+      </div>
+
+      <div class="button-container">
+        <a href="pricing.html#year-12-section"
+        <button class="buttonSubject" data-target-section="year-12-section">HSC</button>
+        </a>
+        <a href="pricing.html#high-school"
+        <button class="buttonSubject" data-target-section="year-11-section">High School</button>
+        </a>
+        <a href="pricing.html#junior-school"
+        <button class="buttonSubject" data-target-section="year-10-section">Junior School</button>
+        </a>
+        <a href="pricing.html#naplan"
+        <button class="buttonSubject" data-target-section="year-9-section">NAPLAN</button>
+        </a>
+      </div>
+
+      
+      
+
+      <div class="subjects-container" id="year-12-section">
+        <h2 class="year-title">HSC (Year 11/12)</h2>
+        <div class="subject">
+          <h3 class="subject-title">
+            Mathematics Standard - Advanced - Extension 1 - Extension 2
+            
+            <i class="fa-solid fa-calculator fa-5x"></i>
+          </h3>
+          <div class="subject-content">
+            <p>Math Standard: designed for students who want to develop practical mathematical skills and knowledge for everyday life, further education, and the workforce. Students
+              doing this subject will expect to see primarily financial mathematics.
+              
+            </p>
+            <br>
+            <p>
+
+              Mathematics Advanced: suitable for students who wish to pursue further studies in mathematics or related fields at the tertiary level. This level of math introduces
+              calculus, including differentiation and integration.
+
+            </p>
+            <br>
+            <p>
+
+              Mathematics Extension 1: An extension of the Mathematics Advanced course and is intended for students who have a strong interest 
+              in mathematics, this subject provides a great foundation for science and technology based degrees at the tertiary level. This subject introduces topics that require a higher level of problem solving skills.
+
+            </p>
+            <br>
+            <p>
+
+              Mathematics Extension 2 is the highest level of mathematics offered in Year 12 in NSW. It is intended for students who have a strong interest
+               and aptitude for mathematics, this subject provides a great foundation for science and technology based degrees at the tertiary level.
+
+            </p>
+            <button class="expand-button" onclick="expandContent(this)">Expand &#9660;</button>
+            <div class="hidden-content" style="display:none;">
+              <p class="hidden-text"></p>
+              <p class="price-info">Price: $60 Online, $70 in-Person</p>
+            </div>
+          </div>
+        </div>
+        <div class="subject">
+          <h3 class="subject-title">
+            Sciences - Biology - Chemistry - Physics
+            <i class="fa-solid fa-flask-vial fa-5x"></i>
+          </h3>
+          <div class="subject-content">
+            <p>The biology curriculum in NSW is designed to foster scientific inquiry, critical thinking, and problem-solving skills. 
+              It covers a range of topics that provide a foundation in biological concepts and principles.</p>
+              <br>
+              <p>
+                Chemistry evokes a scientific discipline that deals with the study of matter, its properties, composition, structure, transformations, and the energy changes that occur during chemical reactions. 
+                The chemistry curriculum in NSW aims to develop students' understanding of the fundamental concepts and principles of chemistry and their applications in everyday life.
+              </p>
+              <br>
+              <p>
+                Physics is a branch of science that deals with the study of matter, energy, and their interactions in the physical world. The physics curriculum in NSW aims 
+                to develop students' understanding of the fundamental principles and concepts of physics and their applications in various phenomena.
+              </p>
+            <button class="expand-button" onclick="expandContent(this)">Expand &#9660;</button>
+            <div class="hidden-content" style="display:none;">
+              <p class="hidden-text"></p>
+              <p class="price-info">Price: $60 online, $70 in person</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    
+
+    <div class="subjects-container" id="high-school">
+      <h2 class="year-title">High School (Years 7-10)</h2>
+      <div class="subject">
+        <h3 class="subject-title">
+          Mathematics 5.2 - 5.3
+          <i class="fa-solid fa-plus-minus fa-5x"></i>
+        </h3>
+        <div class="subject-content">
+          <p>Highschool mathematics aims to provide students with a solid understanding of essential mathematical concepts and develop their problem-solving abilities. They deal with 
+            primarily Algebra, statistics and finance. The skills learned in these subjects are foundational to HSC. It is important that students develop a robust understanding of these subjects.
+          </p>
+          
+          <button class="expand-button" onclick="expandContent(this)">Expand &#9660;</button>
+          <div class="hidden-content" style="display:none;">
+            <p class="hidden-text"></p>
+            <p class="price-info">Price: $60 online, $70 in person</p>
+          </div>
+        </div>
+      </div>
+      <div class="subject">
+        <h3 class="subject-title">
+          Sciences
+          <i class="fa-solid fa-microscope fa-5x"></i>
+        </h3>
+        <div class="subject-content">
+          <p>Highschool science education is typically organized into separate courses or subjects that cover different branches of science. Students learn the basics of chemistry, physics and anatomy. 
+            These concepts are further extended within Years 11-12, especially for students doing Biology, Chemistry, Physics and PDHPE in senior school levels.</p>
+          <button class="expand-button" onclick="expandContent(this)">Expand &#9660;</button>
+          <div class="hidden-content" style="display:none;">
+            <p class="hidden-text"></p>
+            <p class="price-info">Price: $60 online, $70 in person</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <div class="subjects-container" id=junior-school">
+    <h2 class="year-title">Primary School (Years K-6)</h2>
+    <div class="subject">
+      <h3 class="subject-title flex-container">
+        English
+        <i class="fa-solid fa-book fa-5x"></i>
+      </h3>
+      <div class="subject-content button-right">
+        <p>Our K-6 English tutoring program offers students a strong foundation in language skills, reading comprehension, and effective communication. Following the NSW syllabus, we focus on 
+          developing essential skills in reading, writing, speaking, listening, and viewing. Our experienced tutors provide personalized instruction to meet each student's unique needs and foster a love for language from an early age. Through engaging activities, we strengthen phonics, decoding, and comprehension skills, 
+          while also nurturing critical thinking and effective writing abilities. Our program prepares students for the challenges of upper primary English, ensuring they have a solid understanding of essential concepts for future success.</p>
+        <button class="expand-button" onclick="expandContent(this)">Expand &#9660;</button>
+        <div class="hidden-content" style="display:none;">
+          <p class="hidden-text"></p>
+          <p class="price-info">Price: $60 online, $70 in person</p>
+        </div>
+      </div>
+    </div>
+    <div class="subject">
+      <h3 class="subject-title">
+        Maths
+        <i class="fa-solid fa-plus-minus fa-5x"></i>
+      </h3>
+      <div class="subject-content">
+        <p>Our K-6 Math tutoring program aims to provide students with a solid understanding of essential mathematical concepts and develop their problem-solving abilities. Following the NSW syllabus, we focus primarily on Algebra, statistics, and finance, as these subjects lay the foundation for future mathematical learning. 
+          Our experienced tutors guide students through interactive lessons and activities, helping them grasp key mathematical principles and develop critical thinking skills. We emphasize the importance of a robust understanding of these subjects, as they are fundamental to success in the HSC and beyond. Whether it's mastering number operations, 
+          exploring patterns, or analyzing data, our tutoring program equips students with the skills they need to excel in math and approach mathematical challenges with confidence.</p>
+        <button class="expand-button" onclick="expandContent(this)">Expand &#9660;</button>
+        <div class="hidden-content" style="display:none;">
+          <p class="hidden-text"></p>
+          <p class="price-info">Price: $60 online, $70 in person</p>
+        </div>
+      </div>
+    </div>
+    <div class="subject">
+      <h3 class="subject-title">
+        OC Testing
+        <img src="img/placeHolder.jpg" alt="Chemistry subject image" style="width:100px;height:100px;">
+      </h3>
+      <div class="subject-content">
+        <p>The Opportunity Class (OC) is a program developed by the NSW government for year 5 and 6 students, with classes being
+          incredibly academically selective. In our OC tutoring sessions, we focus on strengthening students' skills in the key areas 
+          assessed in the test, including reading comprehension, mathematics, and general ability. Our tutors employ a variety of teaching 
+          methods and resources to enhance students' understanding and mastery of these subjects.
+
+          Our tutors not only prepare students academically but also equip them with effective test-taking strategies, time management skills, 
+          and confidence-building techniques. We aim to empower students to approach the OC test with a positive mindset and the necessary skills
+           to perform at their best.
+
+          Whether students are seeking to enhance their knowledge, refine their test-taking abilities, or boost their confidence, 
+          our OC tutoring program provides the support and resources they need to succeed in the highly competitive OC test.
+        </p>
+        <button class="expand-button" onclick="expandContent(this)">Expand &#9660;</button>
+        <div class="hidden-content" style="display:none;">
+          <p class="hidden-text"></p>
+          <p class="price-info">Price: $60 online, $70 in person</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="subjects-container" id="naplan">
+  <h2 class="year-title">NAPLAN</h2>
+  <div class="subject">
+    <h3 class="subject-title flex-container">
+      Reading
+      <img src="img/placeHolder.jpg" alt="English subject image" style="width:100px;height:100px;">
+    </h3>
+    <div class="subject-content button-right">
+      <p>The reading test evaluates students' ability to understand and interpret various texts, including fiction, non-fiction, and poetry.
+         Students answer multiple-choice and open-ended questions based on the given texts.</p>
+      <button class="expand-button" onclick="expandContent(this)">Expand &#9660;</button>
+      <div class="hidden-content" style="display:none;">
+        <p class="hidden-text"></p>
+              <p class="price-info">Price: $60 online, $70 in person</p>
+      </div>
+    </div>
+  </div>
+  <div class="subject">
+    <h3 class="subject-title">
+      Writing
+      <img src="img/placeHolder.jpg" alt="Maths subject image" style="width:100px;height:100px;">
+    </h3>
+    <div class="subject-content">
+      <p>The writing test assesses students' skills in written expression. Students are required to write a persuasive, narrative, or informative piece within a specific time limit. 
+        Their writing is evaluated based on aspects such as structure, coherence, vocabulary, and grammar.</p>
+      <button class="expand-button" onclick="expandContent(this)">Expand &#9660;</button>
+      <div class="hidden-content" style="display:none;">
+        <p class="hidden-text"></p>
+              <p class="price-info">Price: $60 online, $70 in person</p>
+      </div>
+    </div>
+  </div>
+  <div class="subject">
+    <h3 class="subject-title">
+      Language Conventions
+      <img src="img/placeHolder.jpg" alt="Chemistry subject image" style="width:100px;height:100px;">
+    </h3>
+    <div class="subject-content">
+      <p>This component focuses on students' understanding of spelling, grammar, and punctuation rules.
+         It includes multiple-choice and editing tasks where students identify errors or apply appropriate language conventions.</p>
+      <button class="expand-button" onclick="expandContent(this)">Expand &#9660;</button>
+      <div class="hidden-content" style="display:none;">
+        <p class="hidden-text"></p>
+              <p class="price-info">Price: $60 online, $70 in person</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+    <script>
+      function expandContent(button) {
+        const hiddenContent = button.nextElementSibling;
+        if (hiddenContent.style.display === "none") {
+          hiddenContent.style.display = "block";
+          button.innerHTML = "Collapse &#9650;";
+        } else {
+          hiddenContent.style.display = "none";
+          button.innerHTML = "Expand &#9660;";
+        }
+      }
+    </script>
+
+
+
+
+
+  </body>
+</html>
